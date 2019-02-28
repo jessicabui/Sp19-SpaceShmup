@@ -35,6 +35,6 @@ public class Hero : MonoBehaviour {
         pos.y += yAxis * speed * Time.deltaTime;
         transform.position = pos;
 
-        transform.rotation = Quarternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
+        transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
 	}
 }
