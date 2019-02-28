@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shield : MonoBehaviour {
+public class Shield : MonoBehaviour
+{
 
     [Header("Set in Inspector")]
     public float rotationPerSecond = 0.1f;
@@ -12,16 +13,18 @@ public class Shield : MonoBehaviour {
 
     Material mat;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         mat = GetComponent<Renderer>().material;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         int currLevel = Mathf.FloorToInt(Hero.S.shieldLevel);
 
-        if(levelShown != currLevel)
+        if (levelShown != currLevel)
         {
             levelShown = currLevel;
             mat.mainTextureOffset = new Vector2(0.2f * levelShown, 0);
